@@ -31,7 +31,7 @@ const UserCard = ({id, name, username, imgUrl, personType}: Props) => {
                 <p className='text-small-medium text-gray-1'>@{username}</p>
             </div>
         </div>
-        <Button className='user-card_btn' onClick={() => router.push(`/profile/${id}`)}>
+        <Button className='user-card_btn' onClick={() => personType !== 'Community' ? router.push(`/profile/${id}`) : router.push(`/communities/${id}`)}>
             View
         </Button>
     </article>

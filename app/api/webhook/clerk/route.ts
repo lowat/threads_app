@@ -30,9 +30,10 @@ type Event = {
 };
 
 export const POST = async (request: Request) => {
+  console.log(request);
+
   const payload = await request.json();
   const header = headers();
-  console.log(payload);
 
 
   const heads = {

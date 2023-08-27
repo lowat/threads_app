@@ -71,36 +71,14 @@ function ThreadCard({
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5'>
-                <Image
-                  src='/assets/heart-gray.svg'
-                  alt='heart'
-                  width={24}
-                  height={24}
-                  className='cursor-pointer object-contain'
-                />
                 <Link href={`/thread/${id}`}>
                   <Image
                     src='/assets/reply.svg'
                     alt='heart'
                     width={24}
                     height={24}
-                    className='cursor-pointer object-contain'
                   />
                 </Link>
-                <Image
-                  src='/assets/repost.svg'
-                  alt='heart'
-                  width={24}
-                  height={24}
-                  className='cursor-pointer object-contain'
-                />
-                <Image
-                  src='/assets/share.svg'
-                  alt='heart'
-                  width={24}
-                  height={24}
-                  className='cursor-pointer object-contain'
-                />
               </div>
 
               {isComment && comments.length > 0 && (
@@ -113,14 +91,6 @@ function ThreadCard({
             </div>
           </div>
         </div>
-
-        {/* <DeleteThread
-          threadId={JSON.stringify(id)}
-          currentUserId={currentUserId}
-          authorId={author.id}
-          parentId={parentId}
-          isComment={isComment}
-        /> */}
       </div>
 
       {!isComment && comments.length > 0 && (
